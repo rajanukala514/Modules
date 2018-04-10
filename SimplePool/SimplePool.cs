@@ -73,8 +73,10 @@ namespace Modules.PoolSystem
         private GameObject GetObjectFromPool()
         {
             GameObject go = null;
+            
+            int count = storage.Count;
 
-            for (int i = 0; i < storage.Count; i++)
+            for (int i = 0; i < count; i++)
             {
                 if (!storage[i].activeInHierarchy)
                 {
